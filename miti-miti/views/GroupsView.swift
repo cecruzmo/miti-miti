@@ -50,6 +50,13 @@ struct GroupsView: View {
     }
 }
 
-#Preview {
+#Preview("No Groups") {
     GroupsView()
+}
+
+#Preview("Groups") {
+    let preview = Preview(ExpenseGroup.self)
+    preview.addExamples(ExpenseGroup.expenseGroupsSamples)
+    return GroupsView()
+        .modelContainer(preview.container)
 }
