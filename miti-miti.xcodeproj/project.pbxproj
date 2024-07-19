@@ -3,12 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 60;
+	objectVersion = 70;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		534654612C35091500A4BFBA /* MitiMitiApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 534654602C35091500A4BFBA /* MitiMitiApp.swift */; };
-		534654632C35091500A4BFBA /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 534654622C35091500A4BFBA /* ContentView.swift */; };
 		534654652C35091600A4BFBA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 534654642C35091600A4BFBA /* Assets.xcassets */; };
 		534654682C35091600A4BFBA /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 534654672C35091600A4BFBA /* Preview Assets.xcassets */; };
 /* End PBXBuildFile section */
@@ -16,10 +15,32 @@
 /* Begin PBXFileReference section */
 		5346545D2C35091500A4BFBA /* miti-miti.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "miti-miti.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		534654602C35091500A4BFBA /* MitiMitiApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MitiMitiApp.swift; sourceTree = "<group>"; };
-		534654622C35091500A4BFBA /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		534654642C35091600A4BFBA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		534654672C35091600A4BFBA /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		537E212F2C4AB4C700BA32C6 /* PBXFileSystemSynchronizedBuildFileExceptionSet */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				CreateGroup.swift,
+				GroupsView.swift,
+			);
+			target = 5346545C2C35091500A4BFBA /* miti-miti */;
+		};
+		537E21312C4AB4DC00BA32C6 /* PBXFileSystemSynchronizedBuildFileExceptionSet */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				ExpenseGroup.swift,
+			);
+			target = 5346545C2C35091500A4BFBA /* miti-miti */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		537E212E2C4AB4BB00BA32C6 /* views */ = {isa = PBXFileSystemSynchronizedRootGroup; exceptions = (537E212F2C4AB4C700BA32C6 /* PBXFileSystemSynchronizedBuildFileExceptionSet */, ); explicitFileTypes = {}; explicitFolders = (); path = views; sourceTree = "<group>"; };
+		537E21302C4AB4D500BA32C6 /* model */ = {isa = PBXFileSystemSynchronizedRootGroup; exceptions = (537E21312C4AB4DC00BA32C6 /* PBXFileSystemSynchronizedBuildFileExceptionSet */, ); explicitFileTypes = {}; explicitFolders = (); path = model; sourceTree = "<group>"; };
+/* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		5346545A2C35091500A4BFBA /* Frameworks */ = {
@@ -51,8 +72,9 @@
 		5346545F2C35091500A4BFBA /* miti-miti */ = {
 			isa = PBXGroup;
 			children = (
+				537E21302C4AB4D500BA32C6 /* model */,
+				537E212E2C4AB4BB00BA32C6 /* views */,
 				534654602C35091500A4BFBA /* MitiMitiApp.swift */,
-				534654622C35091500A4BFBA /* ContentView.swift */,
 				534654642C35091600A4BFBA /* Assets.xcassets */,
 				534654662C35091600A4BFBA /* Preview Content */,
 			);
@@ -137,7 +159,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				534654632C35091500A4BFBA /* ContentView.swift in Sources */,
 				534654612C35091500A4BFBA /* MitiMitiApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -281,7 +302,7 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
-				IPHONEOS_DEPLOYMENT_TARGET = "$(RECOMMENDED_IPHONEOS_DEPLOYMENT_TARGET)";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -312,7 +333,7 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
-				IPHONEOS_DEPLOYMENT_TARGET = "$(RECOMMENDED_IPHONEOS_DEPLOYMENT_TARGET)";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
