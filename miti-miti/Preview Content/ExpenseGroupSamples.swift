@@ -14,8 +14,8 @@ extension ExpenseGroup {
     
     static var expenseGroupsSamples: [ExpenseGroup] {
         [
-            ExpenseGroup(name: "Mutual Fund", createdAt: lastWeek),
-            ExpenseGroup(name: "Trip to Mexico", createdAt: lastMonth)
+            ExpenseGroup(name: "Mutual Fund", members: Member.membersSamples, createdAt: lastWeek),
+            ExpenseGroup(name: "Trip to Mexico 🇲🇽", members: Member.membersSamples, createdAt: lastMonth)
         ]
     }
 }

@@ -43,7 +43,7 @@ struct GroupsView: View {
                 }
             }
             .sheet(isPresented: $createGroup) {
-                CreateGroup()
+                CreateGroupView()
                     .presentationDetents([.medium])
             }
         }
