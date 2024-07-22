@@ -21,23 +21,50 @@ struct GroupView: View {
                     ContentUnavailableView("No Expenses Added", systemImage: "dollarsign.gauge.chart.lefthalf.righthalf")
                 } else {
                     List {
-                        ForEach(group.transactions) { transaction in
-                            VStack(alignment: .leading) {
-                                HStack(spacing: 10) {
-                                    Text(transaction.title)
-                                        .font(.title2)
-                                    Spacer()
-                                    Text(transaction.amount.formatted(.currency(code: locale.currency?.identifier ?? "USD")))
-                                        .font(.title2)
-                                        .foregroundStyle(.gray)
-                                }
-                                Text("Paid by: \(transaction.payee.name)")
-                                    .font(.caption)
+                        let total = group.transactions.sum(\.amount)
+                        Section {
+                            HStack(spacing: 10) {
+                                Text("Total")
+                                    .font(.title2)
+                                Spacer()
+                                Text((total).formatted(.currency(code: locale.currency?.identifier ?? "USD")))
+                                    .font(.title2)
                                     .foregroundStyle(.gray)
                             }
                         }
+                        Section(header: Text("Members")) {
+                            let totalPerMember: Double = total / Double(group.members.count)
+                            ForEach(group.members) { member in
+                                let amount = group.transactions.filter { $0.payee == member }.sum(\.amount)
+                                HStack(spacing: 10) {
+                                    Text(member.name)
+                                        .font(.title2)
+                                    Spacer()
+                                    Text((amount - totalPerMember).formatted(.currency(code: locale.currency?.identifier ?? "USD")))
+                                        .font(.title2)
+                                        .foregroundStyle(.gray)
+                                }
+                            }
+                        }
+                        Section(header: Text("Expenses")) {
+                            ForEach(group.transactions) { transaction in
+                                VStack(alignment: .leading) {
+                                    HStack(spacing: 10) {
+                                        Text(transaction.title)
+                                            .font(.title2)
+                                        Spacer()
+                                        Text(transaction.amount.formatted(.currency(code: locale.currency?.identifier ?? "USD")))
+                                            .font(.title2)
+                                            .foregroundStyle(.gray)
+                                    }
+                                    Text("Paid by: \(transaction.payee.name)")
+                                        .font(.caption)
+                                        .foregroundStyle(.gray)
+                                }
+                            }
+                        }
                     }
-                    .listStyle(.plain)
+                    .listStyle(.insetGrouped)
                 }
             }
             .navigationTitle(group.name)
@@ -49,6 +76,7 @@ struct GroupView: View {
                         .imageScale(.large)
                 }
             }
+            .background(Color(uiColor: UIColor.systemGray6))
             .sheet(isPresented: $createTransaction) {
                 CreateTransactionView(group: group)
                     .presentationDetents([.medium])
