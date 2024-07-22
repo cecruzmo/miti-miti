@@ -76,7 +76,6 @@ struct GroupView: View {
                         .imageScale(.large)
                 }
             }
-            .background(Color(uiColor: UIColor.systemGray6))
             .sheet(isPresented: $createTransaction) {
                 CreateTransactionView(group: group)
                     .presentationDetents([.medium])
