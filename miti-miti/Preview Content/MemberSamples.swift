@@ -6,7 +6,6 @@
 //
 
 import Foundation
-import SwiftData
 
 extension Member {
     static var membersSamples: [Member] {

@@ -13,6 +13,7 @@
 		537E21342C4AC1B500BA32C6 /* PreviewContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 537E21332C4AC1B500BA32C6 /* PreviewContainer.swift */; };
 		537E21362C4AC1E300BA32C6 /* ExpenseGroupSamples.swift in Sources */ = {isa = PBXBuildFile; fileRef = 537E21352C4AC1E300BA32C6 /* ExpenseGroupSamples.swift */; };
 		537E214B2C4D70FA00BA32C6 /* MemberSamples.swift in Sources */ = {isa = PBXBuildFile; fileRef = 537E214A2C4D70FA00BA32C6 /* MemberSamples.swift */; };
+		53D78BC52C4DF72000D10F1F /* TransactionSamples.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53D78BC42C4DF72000D10F1F /* TransactionSamples.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +24,7 @@
 		537E21332C4AC1B500BA32C6 /* PreviewContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewContainer.swift; sourceTree = "<group>"; };
 		537E21352C4AC1E300BA32C6 /* ExpenseGroupSamples.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpenseGroupSamples.swift; sourceTree = "<group>"; };
 		537E214A2C4D70FA00BA32C6 /* MemberSamples.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemberSamples.swift; sourceTree = "<group>"; };
+		53D78BC42C4DF72000D10F1F /* TransactionSamples.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionSamples.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
@@ -30,7 +32,9 @@
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
 				CreateGroupView.swift,
+				CreateTransactionView.swift,
 				GroupsView.swift,
+				GroupView.swift,
 			);
 			target = 5346545C2C35091500A4BFBA /* miti-miti */;
 		};
@@ -39,6 +43,7 @@
 			membershipExceptions = (
 				ExpenseGroup.swift,
 				Member.swift,
+				Transaction.swift,
 			);
 			target = 5346545C2C35091500A4BFBA /* miti-miti */;
 		};
@@ -95,6 +100,7 @@
 				537E21332C4AC1B500BA32C6 /* PreviewContainer.swift */,
 				537E21352C4AC1E300BA32C6 /* ExpenseGroupSamples.swift */,
 				537E214A2C4D70FA00BA32C6 /* MemberSamples.swift */,
+				53D78BC42C4DF72000D10F1F /* TransactionSamples.swift */,
 			);
 			path = "Preview Content";
 			sourceTree = "<group>";
@@ -171,6 +177,7 @@
 			files = (
 				537E21362C4AC1E300BA32C6 /* ExpenseGroupSamples.swift in Sources */,
 				534654612C35091500A4BFBA /* MitiMitiApp.swift in Sources */,
+				53D78BC52C4DF72000D10F1F /* TransactionSamples.swift in Sources */,
 				537E214B2C4D70FA00BA32C6 /* MemberSamples.swift in Sources */,
 				537E21342C4AC1B500BA32C6 /* PreviewContainer.swift in Sources */,
 			);

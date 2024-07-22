@@ -6,7 +6,6 @@
 //
 
 import Foundation
-import SwiftData
 
 extension ExpenseGroup {
     static let lastWeek = Calendar.current.date(byAdding: .day, value: -7, to: Date.now)!
@@ -14,8 +13,8 @@ extension ExpenseGroup {
     
     static var expenseGroupsSamples: [ExpenseGroup] {
         [
-            ExpenseGroup(name: "Mutual Fund", members: Member.membersSamples, createdAt: lastWeek),
-            ExpenseGroup(name: "Trip to Mexico 🇲🇽", members: Member.membersSamples, createdAt: lastMonth)
+            ExpenseGroup(name: "Trip to Mexico 🇲🇽", members: Member.membersSamples, createdAt: lastMonth),
+            ExpenseGroup(name: "Mutual Fund", members: Member.membersSamples, transactions: Transaction.transactionsSamples, createdAt: lastWeek)
         ]
     }
 }

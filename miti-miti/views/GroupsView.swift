@@ -22,7 +22,7 @@ struct GroupsView: View {
                     List {
                         ForEach(groups) { group in
                             NavigationLink {
-                                
+                                GroupView(group: group)
                             } label: {
                                 VStack(alignment: .leading) {
                                     Text(group.name).font(.title2)

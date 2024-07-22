@@ -12,11 +12,13 @@ import SwiftData
 class ExpenseGroup {
     var name: String
     var members: [Member]
+    var transactions: [Transaction]
     var createdAt: Date
     
-    init(name: String, members: [Member], createdAt: Date = Date.now) {
+    init(name: String, members: [Member], transactions: [Transaction] = [], createdAt: Date = Date.now) {
         self.name = name
         self.members = members
+        self.transactions = transactions
         self.createdAt = createdAt
     }
 }
