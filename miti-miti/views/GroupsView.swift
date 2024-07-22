@@ -30,7 +30,7 @@ struct GroupsView: View {
                             }
                         }
                     }
-                    .listStyle(.plain)
+                    .listStyle(.insetGrouped)
                 }
             }
             .navigationTitle("My Groups")

@@ -47,11 +47,19 @@
 			);
 			target = 5346545C2C35091500A4BFBA /* miti-miti */;
 		};
+		53D78BD72C4E1FCE00D10F1F /* PBXFileSystemSynchronizedBuildFileExceptionSet */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Sequence.swift,
+			);
+			target = 5346545C2C35091500A4BFBA /* miti-miti */;
+		};
 /* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		537E212E2C4AB4BB00BA32C6 /* views */ = {isa = PBXFileSystemSynchronizedRootGroup; exceptions = (537E212F2C4AB4C700BA32C6 /* PBXFileSystemSynchronizedBuildFileExceptionSet */, ); explicitFileTypes = {}; explicitFolders = (); path = views; sourceTree = "<group>"; };
 		537E21302C4AB4D500BA32C6 /* model */ = {isa = PBXFileSystemSynchronizedRootGroup; exceptions = (537E21312C4AB4DC00BA32C6 /* PBXFileSystemSynchronizedBuildFileExceptionSet */, ); explicitFileTypes = {}; explicitFolders = (); path = model; sourceTree = "<group>"; };
+		53D78BD42C4E1FBA00D10F1F /* utils */ = {isa = PBXFileSystemSynchronizedRootGroup; exceptions = (53D78BD72C4E1FCE00D10F1F /* PBXFileSystemSynchronizedBuildFileExceptionSet */, ); explicitFileTypes = {}; explicitFolders = (); path = utils; sourceTree = "<group>"; };
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +92,7 @@
 		5346545F2C35091500A4BFBA /* miti-miti */ = {
 			isa = PBXGroup;
 			children = (
+				53D78BD42C4E1FBA00D10F1F /* utils */,
 				537E21302C4AB4D500BA32C6 /* model */,
 				537E212E2C4AB4BB00BA32C6 /* views */,
 				534654602C35091500A4BFBA /* MitiMitiApp.swift */,
